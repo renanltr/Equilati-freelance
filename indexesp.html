@@ -4,7 +4,7 @@
 <head>
   <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
-  <title>Home</title>
+  <title>Equilati Equipamentos</title>
   <meta name="description" content="">
   <meta name="keywords" content="">
 
@@ -481,6 +481,17 @@
             </div>-->
           </a>
         </div>
+
+        <!-- Item 8 -->
+        <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-tubulares">
+          <a href="ConjuntosdePasteurizaciónTubulares.html" class="portfolio-link">
+            <img src="assets/img/tubularfilter.webp" class="img-fluid" alt="Peças de Reposição">
+            <!--<div class="portfolio-info">
+              <h4>Trocadores Brasados</h4>
+              <p>Lorem ipsum, dolor sit</p>
+            </div>-->
+          </a>
+        </div>
         
 
       </div>
@@ -668,7 +679,7 @@
     <div class="footer-top row">
       <!-- Columna 1: Logo y Texto -->
       <div class="footer-logo-container col-md-4">
-        <img src="assets/img/logoheader.png" alt="Equilati" class="footer-logo">
+        <img src="assets/img/logofooter.png" alt="Equilati" class="footer-logo">
         <p class="footer-tagline">Desde 1992 ofreciendo soluciones en intercambio térmico. Síguenos en nuestras redes sociales.</p>
         
         <!-- Redes Sociales - Debajo del Texto y Logo -->
@@ -688,6 +699,7 @@
           <li><a href="IntercambiadoresDeCalorBrazados.html">Intercambiadores de Calor Brasados</a></li>
           <li><a href="BombasSanitarias.html">Bombas Sanitarias</a></li>
           <li><a href="PiezasDeRepuesto.html">Piezas de Repuesto</a></li>
+          <li><a href="ConjuntosdePasteurizaciónTubulares.html">Conjuntos de Pasteurización Tubulares</a></li>
         </ul>
       </div>
       
@@ -716,113 +728,6 @@
 
   <!-- Scroll Top -->
   <a href="https://wa.me/5519996610689" target="_blank" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center"><i class="bi bi-whatsapp"></i></a>
-  
-
-  <script>window.addEventListener('scroll', function () {
-    const header = document.querySelector('.header');
-    const logoImg = document.querySelector('.header .logo img');
-    
-    if (window.scrollY > 50) {
-      header.classList.add('scrolled');
-      logoImg.src = "assets/img/logoimg.png";
-    } else {
-      header.classList.remove('scrolled');
-      logoImg.src = "assets/img/logoVert.png";
-    }
-  });</script>
-
-<script>
-  document.addEventListener("DOMContentLoaded", function () {
-    const primaryFilters = document.querySelectorAll(".portfolio-filters:first-of-type li");
-    const secondaryFilterBar = document.querySelector(".portfolio-filters:nth-of-type(2)");
-    const secondaryFilters = secondaryFilterBar ? secondaryFilterBar.querySelectorAll("li") : [];
-    const portfolioItems = document.querySelectorAll(".portfolio-item");
-
-    let activePrimary = "*";
-    let activeSecondary = "*";
-
-    // Esconde a segunda barra inicialmente
-    if (secondaryFilterBar) {
-      secondaryFilterBar.style.display = "none";
-    }
-
-    // Função de filtragem combinada
-    function applyCombinedFilter() {
-      portfolioItems.forEach(item => {
-        const matchesPrimary = activePrimary === "*" || item.classList.contains(activePrimary.replace(".", ""));
-        const matchesSecondary = activeSecondary === "*" || item.classList.contains(activeSecondary.replace(".", ""));
-
-        if (matchesPrimary && matchesSecondary) {
-          item.style.display = "block";
-        } else {
-          item.style.display = "none";
-        }
-      });
-    }
-
-    // Clique na barra primária
-    primaryFilters.forEach(item => {
-      item.addEventListener("click", function () {
-        // Atualiza filtro primário
-        activePrimary = this.getAttribute("data-filter");
-
-        // Exibe ou esconde barra secundária
-        if (secondaryFilterBar) {
-          secondaryFilterBar.style.display = (activePrimary === "*") ? "none" : "flex";
-        }
-
-        // Atualiza visual dos filtros
-        primaryFilters.forEach(el => el.classList.remove("filter-active"));
-        this.classList.add("filter-active");
-
-        // Reseta filtro secundário ao mudar o primário
-        activeSecondary = "*";
-        secondaryFilters.forEach(el => el.classList.remove("filter-active"));
-
-        // Aplica filtro combinado
-        applyCombinedFilter();
-      });
-    });
-
-    // Clique na barra secundária
-    secondaryFilters.forEach(item => {
-      item.addEventListener("click", function () {
-        activeSecondary = this.getAttribute("data-filter");
-
-        // Atualiza visual do secundário
-        secondaryFilters.forEach(el => el.classList.remove("filter-active"));
-        this.classList.add("filter-active");
-
-        // Aplica filtro combinado
-        applyCombinedFilter();
-      });
-    });
-
-    // Aplica o filtro inicial
-    applyCombinedFilter();
-  });
-</script>
-
-<!--<div class="portfolio-item isotope-item filter-product filter-lacteos">
-COLOCAR ASSIM NAS IMAGENS
--->
-
-<script>
-  document.addEventListener("DOMContentLoaded", function () {
-    const filterItems = document.querySelectorAll(".portfolio-filters:first-child li");
-    const secondFilterBar = document.querySelector(".portfolio-filters:nth-of-type(2)");
-
-    filterItems.forEach(item => {
-      item.addEventListener("click", function () {
-        if (this.getAttribute("data-filter") === "*") {
-          secondFilterBar.style.display = "none";
-        } else {
-          secondFilterBar.style.display = "block";
-        }
-      });
-    });
-  });
-</script>
 
   <!-- Preloader -->
   <div id="preloader"></div>

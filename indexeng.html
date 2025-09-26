@@ -4,7 +4,7 @@
 <head>
   <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
-  <title>Home</title>
+  <title>Equilati Equipamentos</title>
   <meta name="description" content="">
   <meta name="keywords" content="">
 
@@ -43,7 +43,7 @@
     <div class="container-fluid container-xl position-relative d-flex align-items-center justify-content-between">
 
       <a href="indexeng.html" class="logo d-flex align-items-center">
-        <img src="assets/img/logoVert.png" data-src-scrolled="assets/img/logoheader.png" alt="Logo"> 
+        <img src="assets/img/logoVert.png" alt="Logo"> 
       </a>
 
       <nav id="navmenu" class="navmenu">
@@ -304,7 +304,7 @@
           <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="100">
             <div class="service-item  position-relative">
               <div class="icon">
-                <i class="bi bi-person-lines-fill" style="color: #292A6E;"></i>
+                <i class="bi bi-person-lines-fill"></i>
               </div>
               <a class="stretched-link">
                 <h3>Consulting</h3>
@@ -316,7 +316,7 @@
           <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="200">
             <div class="service-item position-relative">
               <div class="icon">
-                <i class="bi bi-tools" style="color: #292A6E;"></i>
+                <i class="bi bi-tools"></i>
               </div>
               <a class="stretched-link">
                 <h3>Maintenance</h3>
@@ -328,7 +328,7 @@
           <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="300">
             <div class="service-item position-relative">
               <div class="icon">
-                <i class="bi bi-gear" style="color: #292A6E;"></i>
+                <i class="bi bi-gear"></i>
               </div>
               <a class="stretched-link">
                 <h3>Assembly</h3>
@@ -340,7 +340,7 @@
           <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="400">
             <div class="service-item position-relative">
               <div class="icon">
-                <i class="bi bi-box-seam" style="color: #292A6E;"></i>
+                <i class="bi bi-box-seam"></i>
               </div>
               <a class="stretched-link">
                 <h3>Replacement Parts</h3>
@@ -352,7 +352,7 @@
           <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="500">
             <div class="service-item position-relative">
               <div class="icon">
-                <i class="bi bi-building-gear" style="color: #292A6E;"></i>
+                <i class="bi bi-building-gear" ></i>
               </div>
               <a class="stretched-link">
                 <h3>Installation</h3>
@@ -364,7 +364,7 @@
           <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="600">
             <div class="service-item position-relative">
               <div class="icon">
-                <i class="bi bi-headset" style="color: #292A6E;"></i>
+                <i class="bi bi-headset"></i>
               </div>
               <a class="stretched-link">
                 <h3>After-Sales</h3>
@@ -471,6 +471,17 @@
         <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-reposicao">
           <a href="ReplacementParts.html" class="portfolio-link">
             <img src="assets/img/peças_reposição.webp" class="img-fluid" alt="Peças de Reposição">
+            <!--<div class="portfolio-info">
+              <h4>Trocadores Brasados</h4>
+              <p>Lorem ipsum, dolor sit</p>
+            </div>-->
+          </a>
+        </div>
+
+        <!-- Item 8 -->
+        <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-tubulares">
+          <a href="TubularPasteurizationSystems.html" class="portfolio-link">
+            <img src="assets/img/tubularfilter.webp" class="img-fluid" alt="Peças de Reposição">
             <!--<div class="portfolio-info">
               <h4>Trocadores Brasados</h4>
               <p>Lorem ipsum, dolor sit</p>
@@ -665,7 +676,7 @@
     <div class="footer-top row">
       <!-- Column 1: Logo and Text -->
       <div class="footer-logo-container col-md-4">
-        <img src="assets/img/logoheader.png" alt="Equilati" class="footer-logo">
+        <img src="assets/img/logofooter.png" alt="Equilati" class="footer-logo">
         <p class="footer-tagline">Since 1992 providing solutions in heat exchange. Follow us on our social media.</p>
         
         <!-- Social Media - Below Text and Logo -->
@@ -685,6 +696,7 @@
           <li><a href="BrazedHeatExchangers.html">Brazed Heat Exchangers</a></li>
           <li><a href="SanitaryPumps.html">Sanitary Pumps</a></li>
           <li><a href="ReplacementParts.html">Replacement Parts</a></li>
+          <li><a href="TubularPasteurizationSystems.html">Tubular Pasteurization Systems</a></li>
         </ul>
       </div>
       
@@ -713,113 +725,6 @@
 
   <!-- Scroll Top -->
   <a href="https://wa.me/5519996610689" target="_blank" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center"><i class="bi bi-whatsapp"></i></a>
-  
-
-  <script>window.addEventListener('scroll', function () {
-    const header = document.querySelector('.header');
-    const logoImg = document.querySelector('.header .logo img');
-    
-    if (window.scrollY > 50) {
-      header.classList.add('scrolled');
-      logoImg.src = "assets/img/logoimg.png";
-    } else {
-      header.classList.remove('scrolled');
-      logoImg.src = "assets/img/logoVert.png";
-    }
-  });</script>
-
-<script>
-  document.addEventListener("DOMContentLoaded", function () {
-    const primaryFilters = document.querySelectorAll(".portfolio-filters:first-of-type li");
-    const secondaryFilterBar = document.querySelector(".portfolio-filters:nth-of-type(2)");
-    const secondaryFilters = secondaryFilterBar ? secondaryFilterBar.querySelectorAll("li") : [];
-    const portfolioItems = document.querySelectorAll(".portfolio-item");
-
-    let activePrimary = "*";
-    let activeSecondary = "*";
-
-    // Esconde a segunda barra inicialmente
-    if (secondaryFilterBar) {
-      secondaryFilterBar.style.display = "none";
-    }
-
-    // Função de filtragem combinada
-    function applyCombinedFilter() {
-      portfolioItems.forEach(item => {
-        const matchesPrimary = activePrimary === "*" || item.classList.contains(activePrimary.replace(".", ""));
-        const matchesSecondary = activeSecondary === "*" || item.classList.contains(activeSecondary.replace(".", ""));
-
-        if (matchesPrimary && matchesSecondary) {
-          item.style.display = "block";
-        } else {
-          item.style.display = "none";
-        }
-      });
-    }
-
-    // Clique na barra primária
-    primaryFilters.forEach(item => {
-      item.addEventListener("click", function () {
-        // Atualiza filtro primário
-        activePrimary = this.getAttribute("data-filter");
-
-        // Exibe ou esconde barra secundária
-        if (secondaryFilterBar) {
-          secondaryFilterBar.style.display = (activePrimary === "*") ? "none" : "flex";
-        }
-
-        // Atualiza visual dos filtros
-        primaryFilters.forEach(el => el.classList.remove("filter-active"));
-        this.classList.add("filter-active");
-
-        // Reseta filtro secundário ao mudar o primário
-        activeSecondary = "*";
-        secondaryFilters.forEach(el => el.classList.remove("filter-active"));
-
-        // Aplica filtro combinado
-        applyCombinedFilter();
-      });
-    });
-
-    // Clique na barra secundária
-    secondaryFilters.forEach(item => {
-      item.addEventListener("click", function () {
-        activeSecondary = this.getAttribute("data-filter");
-
-        // Atualiza visual do secundário
-        secondaryFilters.forEach(el => el.classList.remove("filter-active"));
-        this.classList.add("filter-active");
-
-        // Aplica filtro combinado
-        applyCombinedFilter();
-      });
-    });
-
-    // Aplica o filtro inicial
-    applyCombinedFilter();
-  });
-</script>
-
-<!--<div class="portfolio-item isotope-item filter-product filter-lacteos">
-COLOCAR ASSIM NAS IMAGENS
--->
-
-<script>
-  document.addEventListener("DOMContentLoaded", function () {
-    const filterItems = document.querySelectorAll(".portfolio-filters:first-child li");
-    const secondFilterBar = document.querySelector(".portfolio-filters:nth-of-type(2)");
-
-    filterItems.forEach(item => {
-      item.addEventListener("click", function () {
-        if (this.getAttribute("data-filter") === "*") {
-          secondFilterBar.style.display = "none";
-        } else {
-          secondFilterBar.style.display = "block";
-        }
-      });
-    });
-  });
-</script>
 
   <!-- Preloader -->
   <div id="preloader"></div>

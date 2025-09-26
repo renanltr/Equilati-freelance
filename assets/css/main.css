@@ -22,19 +22,20 @@
   --background-color: #ffffff; /* Background color for the entire website, including individual sections */
   --default-color: #444444; /* Default color used for the majority of the text content across the entire website */
   --heading-color: #333; /* Color for headings, subheadings and title throughout the website */
-  --accent-color: #292A6E; /* Accent color that represents your brand on the website. It's used for buttons, links, and other elements that need to stand out */
+  --accent-color: #0046B4; /* Accent color that represents your brand on the website. It's used for buttons, links, and other elements that need to stand out */
   --surface-color: #ffffff; /* The surface color is used as a background of boxed elements within sections, such as cards, icon boxes, or other elements that require a visual separation from the global background. */
   --contrast-color: #ffffff; /* Contrast color for text, ensuring readability against backgrounds of accent, heading, or default colors. */
+  --icon-color: #0046B4 !important;
 }
 
 /* Nav Menu Colors - The following color variables are used specifically for the navigation menu. They are separate from the global colors to allow for more customization options */
 :root {
   --nav-color: #7a7a7a;  /* The default color of the main navmenu links */
-  --nav-hover-color: #292A6E; /* Applied to main navmenu links when they are hovered over or active */
+  --nav-hover-color: #0046B4; /* Applied to main navmenu links when they are hovered over or active */
   --nav-mobile-background-color: #ffffff; /* Used as the background color for mobile navigation menu */
   --nav-dropdown-background-color: #ffffff; /* Used as the background color for dropdown items that appear when hovering over primary navigation items */
   --nav-dropdown-color: #060606; /* Used for navigation links of the dropdown items in the navigation menu. */
-  --nav-dropdown-hover-color: #292A6E; /* Similar to --nav-hover-color, this color is applied to dropdown navigation links when they are hovered over. */
+  --nav-dropdown-hover-color: #0046B4; /* Similar to --nav-hover-color, this color is applied to dropdown navigation links when they are hovered over. */
 }
 
 /* Color Presets - These classes override global colors when applied to any section or element, providing reuse of the sam color scheme. */
@@ -45,7 +46,7 @@
 }
 
 .dark-background {
-  --background-color: #2a2c39;
+  --background-color: #333333;
   --default-color: #ffffff;
   --heading-color: #ffffff;
   --surface-color: #404356;
@@ -56,6 +57,16 @@
 :root {
   scroll-behavior: smooth;
 }
+
+@font-face {
+  font-family: "HAKSEN";
+  src: url("../fonts/HAKSEN.woff2") format("woff2"),
+       url("../fonts/HAKSEN.woff") format("woff"),
+       url("../fonts/HAKSEN.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
 
 /*--------------------------------------------------------------
 # General Styling & Shared Classes
@@ -157,8 +168,9 @@ h6 {
 }
 
 .header .logo img {
-  max-height: 125px;
+  max-height: 50px;
   margin-right: 8px;
+  margin-left: -50px;
   transition: all 0.3s ease;
 }
 
@@ -182,10 +194,6 @@ h6 {
 
 .scrolled .header a{
   color:#fff;
-}
-
-.scrolled.header .logo img{
-  max-height: 50px;
 }
 
 /*--------------------------------------------------------------
@@ -309,7 +317,12 @@ h6 {
     cursor: pointer;
     transition: color 0.3s;
   }
-
+  .header .logo img {
+    max-height: 40px;   /* diminui a altura */
+    margin-left: 0;     /* remove margem negativa */
+    margin-right: 0;    /* centraliza melhor */
+  }
+  
   .navmenu {
     padding: 0;
     z-index: 9997;
@@ -431,7 +444,7 @@ h6 {
 --------------------------------------------------------------*/
 .footer {
   color: var(--default-color);
-  background-color: #001e3d;  /* Cor escura similar à imagem */
+  background-color: #333333;  /* Cor escura similar à imagem */
   font-size: 14px;
   padding: 40px 0;
 }
@@ -457,7 +470,7 @@ h6 {
 
 .footer-logo {
   max-width: 200px;
-  margin-bottom: 10px;
+  margin-bottom: 20px;
 }
 
 .footer-tagline {
@@ -643,11 +656,11 @@ h6 {
 --------------------------------------------------------------*/
 .page-title {
   color: var(--default-color);
-  background-color: #292A6E;
+  background-color: #0046B4;
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-  padding: 160px 0 80px 0;
+  padding: 100px 0 40px 0;
   text-align: center;
   position: relative;
   margin-top: 30px;
@@ -788,7 +801,7 @@ section,
 .hero h2 {
   margin-bottom: 30px;
   font-size: 48px;
-  font-weight: 700;
+  font-weight: 100;
 }
 
 .hero h2 span {
@@ -799,6 +812,7 @@ section,
   max-width: 80%;
   animation-delay: 0.4s;
   margin: 0 auto 30px auto;
+  font-family: var(--nav-font);
 }
 
 @media (min-width: 1024px) {
@@ -878,6 +892,12 @@ section,
     transform: translate(85px, 0%);
   }
 }
+
+.hero, 
+.hero h2  {
+  font-family: "HAKSEN", sans-serif;
+}
+
 
 /*--------------------------------------------------------------
 # About Section
@@ -1086,13 +1106,14 @@ section,
 .services .service-item .icon {
   position: relative; /* Permite que o ícone seja parte do fluxo normal */
   margin-bottom: 20px; /* Espaçamento entre o ícone e o título */
+  color: var(--icon-color) !important;
 }
 
 .services .service-item .icon i {
   font-size: 64px;
   line-height: 1;
   transition: 0.5s;
-  color: var(--accent-color); /* Ajuste a cor conforme necessário */
+  color: var(--icon-color) !important;/* Ajuste a cor conforme necessário */
 }
 
 .services .service-item h3 {
@@ -1505,7 +1526,7 @@ section,
   padding-left: 40px;
   border-radius: 0;
   position: relative;
-  background-color: #1113a32a;
+  background-color: #CCCCCC;
 }
 
 .faq .custom-accordion .accordion-item .btn-link:before {
@@ -1694,7 +1715,7 @@ section,
 }
 
 .contact .info-item i {
-  color: #292A6E;
+  color: #0046B4;
   background: color-mix(in srgb, var(--accent-color), transparent 92%);
   font-size: 20px;
   width: 44px;
@@ -1712,7 +1733,7 @@ section,
   font-size: 18px;
   font-weight: 700;
   margin-bottom: 5px;
-  color: #292A6E;
+  color: #0046B4;
 }
 
 .contact .info-item p {
@@ -1756,7 +1777,7 @@ section,
 
 .contact .php-email-form button[type=submit] {
   color: var(--contrast-color);
-  background: #292A6E;
+  background: #0046B4;
   border: 0;
   padding: 10px 30px;
   transition: 0.4s;
